@@ -1,9 +1,5 @@
-console.log("  !5-recursion!");
-let number = prompt(
-  "Задание 5, введите число и мы скажем, чётное ли оно или нет"
-);
 function isEven(number) {
-    number = Math.abs (number);
+  number = Math.abs(number);
   while (number > 1) {
     number = number - 2;
   }
@@ -13,4 +9,10 @@ function isEven(number) {
     return true;
   }
 }
-console.log(isEven(number));
+function exercise5() {
+  console.log("  !5-recursion!");
+  let number = prompt(
+    "Задание 5, введите число и мы скажем, чётное ли оно или нет"
+  );
+  console.log(isEven(number));
+}

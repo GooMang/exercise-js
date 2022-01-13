@@ -1,6 +1,3 @@
-console.log("  !4-min!");
-let first = prompt("Задача номер 4, введите первое число");
-let second = prompt("Задача номер 4, введите второе число");
 function min(first, second) {
   if (first > second) {
     return second;
@@ -8,4 +5,9 @@ function min(first, second) {
     return first;
   }
 }
-console.log(min(first, second));
+function exercise4() {
+  console.log("  !4-min!");
+  let first = prompt("Задача номер 4, введите первое число");
+  let second = prompt("Задача номер 4, введите второе число");
+  console.log(min(first, second));
+}
