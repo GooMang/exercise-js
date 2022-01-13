@@ -1,1 +1,1 @@
-# exercise-js
+[Макет](http://www.itmathrepetitor.ru/zadachi-po-javascript-iz-knigi-vyrazitelnyjj-javascript/)
