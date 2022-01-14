@@ -1,32 +1,35 @@
 function exercise7() {
   console.log("  !7-summArray!");
-  let firstNumber = Number(prompt("Задание 7 Введите первое значение для диапазона"));
+  let firstNumber = Number(
+    prompt("Задание 7 Введите первое значение для диапазона")
+  );
   let secondNumber = Number(prompt("Введите второе значение"));
-  console.log(range(firstNumber, secondNumber));
-  console.log(sum(range(firstNumber, secondNumber)));
+  let difference = Number(prompt("Введите шаг"));
+  console.log(range(firstNumber, secondNumber, difference));
+  console.log(sum(range(firstNumber, secondNumber, difference)));
 }
 
-function range(firstNumber, secondNumber) {
-  let i = 0;
+function range(firstNumber, secondNumber, difference) {
   let arr = [];
+  if (isNaN(difference) == true) {
+    difference = 1;
+  }
   if (firstNumber < secondNumber) {
-    difference = secondNumber - firstNumber;
-    while (difference + 1 >= 1) {
+    arr.push(firstNumber);
+    for (; firstNumber < secondNumber; ) {
+      firstNumber = firstNumber + difference;
       arr.push(firstNumber);
-      i++;
-      firstNumber++;
-      difference--;
     }
   } else {
-    difference = firstNumber - secondNumber;
-    while (difference + 1 >= 1) {
+    arr.push(firstNumber);
+    for (; secondNumber < firstNumber; ) {
+      firstNumber = firstNumber - difference;
       arr.push(firstNumber);
-      i++;
-      firstNumber--;
-      difference--;
     }
   }
-
+  if (secondNumber != firstNumber) {
+    arr.pop();
+  }
   return arr;
 }
 
