@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/GooMang/exercise-js/issues"
   },
-  "homepage": "https://github.com/GooMang/exercise-js#readme"
+  "homepage": "https://github.com/GooMang/exercise-js#readme",
+  "devDependencies": {
+    "jest": "^27.4.7"
+  }
 }
