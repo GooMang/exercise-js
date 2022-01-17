@@ -40,3 +40,8 @@ function sum(arr) {
   }
   return sum;
 }
+
+module.exports = {
+  range,
+  sum,
+};
