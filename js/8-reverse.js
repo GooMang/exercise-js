@@ -20,3 +20,8 @@ function reverseArrayInPlace(arrayValue) {
     arrayValue.splice(arrayValue.length - i - 2, 1);
   }
 }
+
+module.exports = {
+  reverseArray,
+  reverseArrayInPlace,
+};
