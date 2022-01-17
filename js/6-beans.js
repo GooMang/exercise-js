@@ -8,7 +8,7 @@ function countBs(string, letter) {
 
 function exercise6() {
   console.log("  !6-beans!");
-  string = prompt("Введите слово для анализа");
-  letter = prompt("Введие букву, которую надо найти");
+  let string = prompt("Введите слово для анализа");
+  let letter = prompt("Введие букву, которую надо найти");
   console.log(countBs(string, letter));
 }
