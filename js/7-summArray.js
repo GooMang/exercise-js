@@ -9,11 +9,10 @@ function exercise7() {
   console.log(sum(range(firstNumber, secondNumber, difference)));
 }
 
-function range(firstNumber, secondNumber, difference) {
+function range(firstNumber, secondNumber, difference = 1) {
   let arr = [];
-  if (isNaN(difference) == true) {
-    difference = 1;
-  }
+
+  // TODO: do while
   if (firstNumber < secondNumber) {
     arr.push(firstNumber);
     for (; firstNumber < secondNumber; ) {
