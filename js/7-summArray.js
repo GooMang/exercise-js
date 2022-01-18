@@ -11,38 +11,33 @@ function exercise7() {
 
 function range(firstNumber, secondNumber, difference = 1) {
   let arr = [];
-  let error = "!Обнаружена ошибка, проверьте данные для ввода!";
-  // TODO: do while
-  if (firstNumber < secondNumber) {
-    if (difference > 0) {
-      do {
-        arr.push(firstNumber);
-        firstNumber = firstNumber + difference;
-      } while (firstNumber <= secondNumber + 1);
-    } else {
-      return error;
-    }
-  } else {
-    if (difference < 0) {
-      do {
-        arr.push(firstNumber);
-        firstNumber = firstNumber + difference;
-      } while (secondNumber <= firstNumber + 1);
-    } else {
-      return error;
-    }
+  if (firstNumber === secondNumber) {
+    throw new Error("Invalid input arguments");
+  }
+  if (firstNumber > secondNumber && difference >= 0) {
+    throw new Error("Invalid input arguments");
+  }
+  if (firstNumber < secondNumber && difference <= 0) {
+    throw new Error("Invalid input arguments");
   }
 
-  if (secondNumber != firstNumber) {
-    arr.pop();
-  }
+  let current = firstNumber;
+  do {
+    arr.push(current);
+    current = current + difference;
+  } while (
+    firstNumber > secondNumber
+      ? current >= secondNumber
+      : current <= secondNumber
+  );
+
   return arr;
 }
 
 function sum(arr) {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
-    sum = sum + arr[i];
+    sum += arr[i];
   }
   return sum;
 }

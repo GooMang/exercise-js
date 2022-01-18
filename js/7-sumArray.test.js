@@ -16,6 +16,24 @@ describe("range", () => {
   test("default test with negative value", () => {
     expect(range(-10, -1, 2)).toEqual([-10, -8, -6, -4, -2]);
   });
+
+  test("last current is equal to second", () => {
+    expect(range(1, 10, 2)).toEqual([1, 3, 5, 7, 9]);
+  });
+
+  describe("infinive loop", () => {
+    test("positive difference", () => {
+      expect(() => range(10, 1, 1)).toThrow();
+    });
+
+    test("negative difference", () => {
+      expect(() => range(1, 10, -1)).toThrow();
+    });
+
+    test("first is equal to second", () => {
+      expect(() => range(10, 10, 1)).toThrow();
+    });
+  });
 });
 
 describe("sum", () => {
