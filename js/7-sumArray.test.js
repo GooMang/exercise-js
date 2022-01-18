@@ -8,6 +8,14 @@ describe("range", () => {
   test("with step", () => {
     expect(range(1, 10, 2)).toEqual([1, 3, 5, 7, 9]);
   });
+
+  test("with negative step", () => {
+    expect(range(10, 1, -2)).toEqual([10, 8, 6, 4, 2]);
+  });
+
+  test("default test with negative value", () => {
+    expect(range(-10, -1, 2)).toEqual([-10, -8, -6, -4, -2]);
+  });
 });
 
 describe("sum", () => {

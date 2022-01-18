@@ -11,21 +11,28 @@ function exercise7() {
 
 function range(firstNumber, secondNumber, difference = 1) {
   let arr = [];
-
+  let error = "!Обнаружена ошибка, проверьте данные для ввода!";
   // TODO: do while
   if (firstNumber < secondNumber) {
-    arr.push(firstNumber);
-    for (; firstNumber < secondNumber; ) {
-      firstNumber = firstNumber + difference;
-      arr.push(firstNumber);
+    if (difference > 0) {
+      do {
+        arr.push(firstNumber);
+        firstNumber = firstNumber + difference;
+      } while (firstNumber <= secondNumber + 1);
+    } else {
+      return error;
     }
   } else {
-    arr.push(firstNumber);
-    for (; secondNumber < firstNumber; ) {
-      firstNumber = firstNumber - difference;
-      arr.push(firstNumber);
+    if (difference < 0) {
+      do {
+        arr.push(firstNumber);
+        firstNumber = firstNumber + difference;
+      } while (secondNumber <= firstNumber + 1);
+    } else {
+      return error;
     }
   }
+
   if (secondNumber != firstNumber) {
     arr.pop();
   }
