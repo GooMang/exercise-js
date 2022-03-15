@@ -10,7 +10,13 @@ function deepEqual(firstObj, secondObj) {
   const zeroObj = {};
   let firstObjCheck = 0;
   let secondObjCheck = 0;
-  if (
+  if (firstObj === null || secondObj === null) {
+    if (firstObj === secondObj) {
+      return true;
+    } else {
+      return false;
+    }
+  } else if (
     typeof firstObj === typeof secondObj &&
     typeof firstObj === typeof zeroObj
   ) {
