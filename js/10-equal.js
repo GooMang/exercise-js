@@ -1,5 +1,5 @@
 function exercise10() {
-  console.log("  !10-list!");
+  console.log("  !10-equal!");
   const obj = { here: { is: "an" }, object: 2 };
   console.log(deepEqual(obj, obj));
   console.log(deepEqual(obj, { here: 1, object: 2 }));
