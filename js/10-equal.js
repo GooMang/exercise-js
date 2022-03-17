@@ -22,7 +22,6 @@ function deepEqual(firstObj, secondObj) {
   ) {
     for (let key in firstObj) {
       if (deepEqual(firstObj[key], secondObj[key]) === false) {
-        console.log("check-obj-no");
         return false;
       }
       firstObjCheck++;
@@ -31,19 +30,15 @@ function deepEqual(firstObj, secondObj) {
       secondObjCheck++;
     }
     if (firstObjCheck == secondObjCheck) {
-      console.log("check-obj-yes");
       return true;
     } else {
       return false;
     }
   } else if (firstObj === secondObj) {
-    console.log("check-three-=");
     return true;
   } else if (Number(firstObj) === Number(secondObj)) {
-    console.log("check-Number");
     return true;
   } else {
-    console.log("check-false");
     return false;
   }
 }
