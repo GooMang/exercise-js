@@ -1,5 +1,5 @@
-function exercise16() {
-  console.log("  !16-interface!");
+function exercise17() {
+  console.log("  !17-interface!");
 
   function logFive(object) {
     for (let i = 0; i < 5; i++)
